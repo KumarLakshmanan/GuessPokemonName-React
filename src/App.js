@@ -89,14 +89,17 @@ const App = () => {
 						className='btnSubmit'
 						onClick={() => setisBegin(true)}
 					>
-						{isStart ? "Start Pokemon Quiz" : "Go to Next Question"}
+						{isStart ? "Start Quiz" : "Go to Next"}
 					</button>
 				</div>
 			) : (
 				<>
 					<div className='image'>
 						{correctAnswer.img ? (
-							<img src={correctAnswer.img} alt='Loading' />
+							<img
+								src={correctAnswer.img}
+								alt={correctAnswer.name}
+							/>
 						) : (
 							<div className='container'>
 								<div className='box1'></div>
